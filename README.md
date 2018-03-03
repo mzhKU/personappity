@@ -1,5 +1,5 @@
 # personappity
 Are you Chandler, Ross or Phoebe?
 
-![App Screenshot](personappity/personappity.png)
+![App Screenshot](https://github.com/mzhKU/personappity/blob/master/img/personappity.png)
 
