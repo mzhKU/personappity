@@ -8,13 +8,15 @@ body {
 }
 
 .wrapper {
+  height: 100vh;
   max-width: 600px;
   margin: 10% auto;
 
   display: grid;
   grid-auto-columns: minmax(4em, 10em);
   /* grid-auto-rows: 6em 24em 6em; */
-  grid-auto-rows: 15% 70% 15%;
+  /* grid-auto-rows: 15% 70% 15%; */
+  grid-auto-rows: 8vh 70vh 8vh;
   grid-gap: 1px;
 }
 
@@ -27,9 +29,9 @@ body {
 }
 
 div.box {
-  /* height: 4em; */
+  height: 4em; 
   font-size: 2em;
-  line-height: 3em;
+  line-height: 2em;
 }
 
 div.question {
