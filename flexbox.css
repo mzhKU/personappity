@@ -1,0 +1,51 @@
+.box {
+  display: flex;
+  flex-flow: wrap;
+  border: 1px dashed grey;
+}
+
+.box div {
+  border: 1px solid black;
+}
+
+div.box > .top {
+    /* A size value for main-axis dimension
+       is required for flex-grow to work. */
+    width: 10%;
+    height: 10%;
+
+    /* '1': Flex-items get equal amounts of
+            left free space.*/ 
+    flex-grow: 1;
+
+}
+
+/* Pseudo-class for middle div in top row.
+   Second flex-item gets twice the available
+   left free space of row, based on free
+   space after using 3*10% of 600px. */
+div.top:nth-of-type(2) {
+    flex-grow: 2;
+}
+
+div.box > .low {
+    width: 10%;
+    height: 10%;
+    /* flex-grow: 1; */
+    flex: 1 1 auto;
+}
+
+div.box > .middle {
+    width: 100%;
+    height: 78%;
+    flex-grow: 2;
+}
+
+@media (min-width: 700px) {
+    .box {
+        height: 60%;
+        width: 600px;
+        margin: 10% auto;
+    }
+}
+
