@@ -17,20 +17,22 @@ div.box > .top {
     /* '1': Flex-items get equal amounts of
             left free space.*/ 
     flex-grow: 1;
+
 }
 
-/* Pseudo-class for middle div in top row. */
+/* Pseudo-class for middle div in top row.
+   Second flex-item gets twice the available
+   left free space of row, based on free
+   space after using 3*10% of 600px. */
 div.top:nth-of-type(2) {
-    /* Second flex-item gets twice the available
-       left free space of row, based on free
-       space after using 3*10% of 600px. */
     flex-grow: 2;
 }
 
 div.box > .low {
     width: 10%;
     height: 10%;
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    flex: 1 1 auto;
 }
 
 div.box > .middle {
