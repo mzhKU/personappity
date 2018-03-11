@@ -16,12 +16,6 @@ body {
   margin: 1px;
 }
 
-/* 
-.box div {
-  border: 1px solid black;
-}
-*/
-
 div.box > .top {
     /* A size value for main-axis dimension
        is required for flex-grow to work. */
@@ -80,3 +74,9 @@ div.box > .middle {
     }
 }
 
+@media (orientation: landscape) {
+    div.box > .low,
+    div.box > .top {
+        line-height: 2em;
+    }
+}
