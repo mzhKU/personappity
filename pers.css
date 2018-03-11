@@ -13,6 +13,7 @@
 
 @media (min-width: 700px) {
     .box {
+        height: 60%;
         width: 600px;
         margin: 10% auto;
         align-items: center;
@@ -20,7 +21,7 @@
     }
 
     .box div {
-        height: 100px;
+        height: 80%;
     }
 }
 
