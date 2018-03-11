@@ -4,14 +4,23 @@ body {
 } 
 
 .box {
+  height: 98%;
   display: flex;
   flex-flow: wrap;
-  /* border: 1px dashed grey; */
 }
 
+
 .box div {
-  border: 2px solid black;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 1px;
 }
+
+/* 
+.box div {
+  border: 1px solid black;
+}
+*/
 
 div.box > .top {
     /* A size value for main-axis dimension
@@ -34,6 +43,8 @@ div.box > .top {
    space after using 3*10% of 600px. */
 div.top:nth-of-type(2) {
     flex-grow: 2;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 div.top p {

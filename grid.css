@@ -19,7 +19,7 @@ body {
 }
 
 .wrapper > div {
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 4px;
   background-color: white
   color: black;
