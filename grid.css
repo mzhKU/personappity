@@ -34,9 +34,10 @@ div.box {
 
 div.question {
   font-size: 2em;
+  font-weight: 300;
   text-align: left;
   padding-left: 1em;
-  padding-top: 1em;
+  padding-top: 0.5em;
   padding-right: 1em;
 }
 

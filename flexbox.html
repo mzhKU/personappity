@@ -13,12 +13,20 @@
         <div ng-app="app" class="box" ng-controller="ctl">
             <div class="top" ng-click="last()">Last  </div>
             <div class="top">
-                Question Nr.: {{ questionCounter }}
+                <p>Question Nr.: {{ questionCounter }}</p>
             </div>
             <div class="top" ng-click="next()">Next  </div>
 
             <div class="middle">
                 <p ng-bind="question"></p>
+                <p>Imagine you get a phone call late at night
+                by somebody who says he's member of a
+                secret society with the mission to make
+                the world reasonable and better again.
+                He asks you to join because you have the
+                connections needed for the next mission.
+                People might get hurt. Would you join?
+                You have ten seconds to decide.</p>
             </div>
 
             <div class="low">No</div>
