@@ -1,34 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Lato, Helvetica, sans-serif;
     font-size: 10px;
 } 
 
-.box {
-  height: 98%;
+.wrapper {
+  height: 98%; /* <- FIX: overflow on mobile */
   display: flex;
   flex-flow: wrap;
 }
 
-
-.box div {
+.wrapper div {
   border: 1px solid black;
   border-radius: 4px;
+  text-align: center;
   margin: 1px;
 }
 
-div.box > .top {
+div.wrapper > .top, div.wrapper > .low {
+    font-size: 2em;
+    line-height: 3em;
     /* A size value for main-axis dimension
        is required for flex-grow to work. */
     width: 10%;
     height: 10%;
-
     /* '1': Flex-items get equal amounts of
-            left free space.*/ 
-    flex-grow: 1;
-
-    text-align: center;
-    font-size: 2em;
-    line-height: 3em;
+            left free space, 'flex-grow: 1;' */
+    flex: 1 1 auto; /* <- FIX: Standard way of writing. */
 }
 
 /* Pseudo-class for middle div in top row.
@@ -37,46 +38,36 @@ div.box > .top {
    space after using 3*10% of 600px. */
 div.top:nth-of-type(2) {
     flex-grow: 2;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
 }
 
 div.top p {
-    margin: 0 auto;
+    margin: 0 auto; /* <- FIX */
 }
 
-div.box > .low {
-    width: 10%;
-    height: 10%;
-    /* flex-grow: 1; */
-    flex: 1 1 auto;
+div.question {
     font-size: 2em;
-    text-align: center;
-    line-height: 3em;
-}
-
-div.box > .middle {
+    font-weight: 300;
     width: 100%;
     height: 78%;
     flex-grow: 2;
-    font-size: 2em;
-    font-weight: 300;
     padding-left: 1em;
     padding-top: 0.5em;
     padding-right: 1em;
+    text-align: left;
+    line-height: 1.5em;
 }
 
 @media (min-width: 700px) {
-    .box {
+    .wrapper {
         height: 60%;
         width: 600px;
         margin: 10% auto;
+        line-height: 4em;
     }
 }
 
 @media (orientation: landscape) {
-    div.box > .low,
-    div.box > .top {
+    div.wrapper > .low, div.wrapper > .top {
         line-height: 2em;
     }
 }
