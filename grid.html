@@ -5,17 +5,21 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,
                                        initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="./app.js"></script>
     </head>
 
     <body>
 
-        <div class="wrapper">
-            <div class="top last"><span>Last</span></div>
-            <div class="top info"><span>Question 1/3</span></div>
-            <div class="top next"><span>Next</span></div>
+        <div ng-app="app" class="wrapper" ng-controller="ctl">
+            <div class="top last" ng-click="last()">Last</div>
+            <div class="top info">
+                <span>Question {{ questionCounter }}</span>
+            </div>
+            <div class="top next" ng-click="next()">Next</div>
 
             <div class="question">
-                <p>Question 1</p>
+                <p ng-bind="question"></p>
                 <p>Imagine you get a phone call late at night
                 by somebody who says he's member of a
                 secret society with the mission to make

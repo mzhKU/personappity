@@ -40,10 +40,6 @@ div.top:nth-of-type(2) {
     flex-grow: 2;
 }
 
-div.top p {
-    margin: 0 auto; /* <- FIX */
-}
-
 div.question {
     font-size: 2em;
     font-weight: 300;
