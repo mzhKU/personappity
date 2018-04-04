@@ -10,3 +10,44 @@ body {
 a:link {
     text-decoration: none;
 }
+
+.wrapper {
+  height: 98%;
+  width: 100%;
+}
+
+div.wrapper > div {
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+}
+
+div.wrapper > .top, div.wrapper > .low {
+  font-size: 2em;
+  line-height: 3em;
+}
+
+div.question p {
+  font-size: 2em;
+  font-weight: 300;
+  width: 100%;
+  padding-left: 1em;
+  padding-top: 0.5em;
+  padding-right: 1em;
+  text-align: left;
+}
+
+@media (min-width: 700px) {
+    .wrapper {
+        height: 60%;
+        width: 600px;
+        margin: 10% auto;
+        line-height: 4em;
+    }
+}
+
+@media (orientation: landscape) {
+    div.wrapper > .low, div.wrapper > .top {
+        line-height: 2em;
+    }
+}

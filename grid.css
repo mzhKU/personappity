@@ -1,30 +1,8 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-    font-family: Lato, Helvetica, sans-serif;
-    font-size: 10px;
-}
-
 .wrapper {
-  height: 98%;
-  width: 100%;
   display: grid;
   grid-template-rows: 11% 78% 11%;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 4px;
-}
-
-.wrapper > div {
-  border: 1px solid black;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.wrapper > .top, .wrapper > .low {
-  font-size: 2em;
-  line-height: 3em;
 }
 
 .last { grid-column: 1 / 2; }
@@ -35,29 +13,3 @@ body {
 .answM { grid-column: 3 / 5; }
 .answY { grid-column: 5 / 7; }
 
-div.question {
-  font-size: 2em;
-  font-weight: 300;
-  width: 100%;
-  height: 100%;
-  padding-left: 1em;
-  padding-top: 0.5em;
-  padding-right: 1em;
-  text-align: left;
-}
-
-
-@media (min-width: 700px) {
-    .wrapper {
-        height: 60%;
-        width: 600px;
-        margin: 10% auto;
-        line-height: 4em;
-    }
-}
-
-@media (orientation: landscape) {
-    div.wrapper > .low, div.wrapper > .top {
-        line-height: 2em;
-    }
-}
