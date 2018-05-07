@@ -9,6 +9,10 @@ div.wrapper > div {
   margin: 1px;
 }
 
+div.question {
+  height: 80%; /* Why 80% ? */
+}
+
 .top, .low {
     /* Base size for flex layout model. */
     width: 10%;
