@@ -6,7 +6,6 @@
         <meta charset="utf-8">
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0">
-
         <script src="http://code.jquery.com/jquery-latest.min.js">
         </script>
         <script src="//code.angularjs.org/1.7.0/angular.min.js">
@@ -19,44 +18,28 @@
 
     <body ng-app="app">
         <div class="wrapper" ng-controller="QuestionsController">
-            <div class="top" id="last" ng-click="step($event)">Last</div>
-            <div class="top">
-                <span>Question {{ questionCounter }}</span>
+            <div class="top"      id="last" ng-click="step($event)">Last</div>
+            <div class="top">     <span>Question {{ questionCounter }}</span></div>
+            <div class="top"      id="next" ng-click="step($event)">Next</div>
+
+            <div class="question">
+                <p ng-bind="question"></p>
+                <p>
+                    <span style="border: 1px solid grey">
+                        Current answer: 
+                        <span ng-bind="answer">{{ answer }}</span>
+                    </span>
+                </p>
             </div>
-            <div class="top" id="next" ng-click="step($event)">Next</div>
-
-            <div id="out">
-                <div id="main">
-                    <div class="question">
-                        <p ng-bind="question"></p>
-                        <p>
-                            <span style="border: 1px solid grey">
-                                Current answer: 
-                                <span ng-bind="answer">{{ answer }}
-                                </span>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-
-                <div id="resultsDraw">
-                    <!--
-                    -->
-                    <p><span ng-bind="results">{{ results }}
-                       </span>
-                    </p>
-                </div>
+            <div id="resultsDraw">
+                <p><span ng-bind="results">{{ results }}</span></p>
             </div>
 
-            <div class="low answN" id="no"
-                 ng-click="step($event)">No</div>
-            <div class="low answM" id="maybe"
-                 ng-click="step($event)">Maybe</div>
-            <div class="low answY" id="yes"
-                 ng-click="step($event)">Yes</div>
+            <div class="low answN" id="no" ng-click="step($event)">No</div>
+            <div class="low answM" id="maybe" ng-click="step($event)">Maybe</div>
+            <div class="low answY" id="yes" ng-click="step($event)">Yes</div>
 
-            <div id="getResultsDiv" class="admin"
-                 ng-click="getResults()">Results</div>
+            <div id="getResultsDiv" class="admin" ng-click="getResults()">Results</div>
         </div>
     </body>
 </html>

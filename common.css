@@ -1,44 +1,35 @@
-* {
-    box-sizing: border-box;
-}
+*        { box-sizing: border-box;    }
+a:link   { text-decoration: none;     }
+.wrapper { height: 100%; width: 100%; }
 
 body {
     font-family: Lato, Helvetica, sans-serif;
     font-size: 10px;
 } 
 
-a:link {
-    text-decoration: none;
+/* Buttons click effect. */
+div.top:active,
+div.low:active,
+div.admin:active {
+  background-color: lightblue;
 }
 
-.wrapper {
-  height: 98%;
-  width: 100%;
+/* Buttons font size. */
+div.wrapper > .top,
+div.wrapper > .low,
+div.wrapper > .admin {
+  font-size: 2em;
+  line-height: 3em;
 }
 
+/* Buttons shape. */
 div.wrapper > div {
   border: 1px solid black;
   border-radius: 4px;
   text-align: center;
 }
 
-/* XXXXXXXXXXXXXXXXXXXXXX */
-div.wrapper > .top, div.wrapper > .low {
-  font-size: 2em;
-  line-height: 3em;
-}
-
-/* Add to 'div.wrapper > .admin' in final version. */
-div.wrapper > .admin {
-  font-size: 2em;
-  line-height: 3em;
-}
-
-/* XXXXXXXXXXXXXXXXXXXXXX */
-div.top:active, div.low:active, div.admin:active {
-  background-color: lightblue;
-}
-
+/* Questions font size. */
 div.question p {
   font-size: 2em;
   font-weight: 300;
@@ -50,17 +41,25 @@ div.question p {
   border: 1px solid grey;
 }
 
+/* Results layout. */
+#resultsDraw {
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 100%;
+}
+
+/* Responsiveness. */
 @media (min-width: 700px) {
     .wrapper {
-        height: 60%;
-        width: 600px;
-        margin: 10% auto;
-        line-height: 4em;
+        height: 60%; width: 600px;
+        margin: 10% auto; line-height: 4em;
     }
 }
 
 @media (orientation: landscape) {
-    div.wrapper > .low, div.wrapper > .top, div.wrapper > .admin {
+    div.wrapper > .low,
+    div.wrapper > .top,
+    div.wrapper > .admin {
         line-height: 2em;
     }
 }
