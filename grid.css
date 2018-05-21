@@ -1,7 +1,7 @@
 /* .top .question #resultsDraw .low .admin*/
 .wrapper {
   display: grid;
-  grid-template-rows: 10% 48% 20% 10% 10%;
+  grid-template-rows: 10% 28% 40% 10% 10%;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 0.5%;
 }
