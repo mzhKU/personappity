@@ -22,9 +22,21 @@ div.wrapper > div {
   text-align: center;
 }
 
+/* XXXXXXXXXXXXXXXXXXXXXX */
 div.wrapper > .top, div.wrapper > .low {
   font-size: 2em;
   line-height: 3em;
+}
+
+/* Add to 'div.wrapper > .admin' in final version. */
+div.wrapper > .admin {
+  font-size: 2em;
+  line-height: 3em;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXX */
+div.top:active, div.low:active, div.admin:active {
+  background-color: lightblue;
 }
 
 div.question p {
@@ -35,6 +47,7 @@ div.question p {
   padding-top: 0.5em;
   padding-right: 1em;
   text-align: left;
+  border: 1px solid grey;
 }
 
 @media (min-width: 700px) {
@@ -47,7 +60,7 @@ div.question p {
 }
 
 @media (orientation: landscape) {
-    div.wrapper > .low, div.wrapper > .top {
+    div.wrapper > .low, div.wrapper > .top, div.wrapper > .admin {
         line-height: 2em;
     }
 }

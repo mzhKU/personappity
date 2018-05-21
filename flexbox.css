@@ -9,8 +9,28 @@ div.wrapper > div {
   margin: 1px;
 }
 
-div.question {
-  height: 80%; /* Why 80% ? */
+#out {
+  width: 100%;
+  height: 70%;
+  border: 1px solid black;
+}
+
+/* div.question { */
+#main {
+  width: 100%; /* XXXXXXXXXXX */
+  /* Why can the height not take the available vertical space? */
+  /* -> Perhaps set main axis to column? */
+  height: 30%;
+  display: block;
+}
+
+#resultsDraw {
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 100%;
+  height: 50%;
+  display: block;
+  border: 1px solid grey;
 }
 
 .top, .low {
@@ -26,3 +46,9 @@ div.top:nth-of-type(2) {
 
 .top { align-self: flex-start; }
 .low { align-self: flex-end; }
+
+#getResultsDiv {
+    width: 100%;
+    height: 10%;
+    border: 1px solid black;
+}
