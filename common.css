@@ -35,7 +35,6 @@ div.question p {
   font-weight: 300;
   width: 100%;
   padding-left: 1em;
-  padding-top: 0.5em;
   padding-right: 1em;
   text-align: left;
   border: 1px solid grey;
@@ -51,8 +50,8 @@ div.question p {
 /* Responsiveness. */
 @media (min-width: 700px) {
     .wrapper {
-        height: 60%; width: 600px;
-        margin: 10% auto; line-height: 4em;
+        height: 80%; width: 600px;
+        margin: 10% auto; line-height: 2em;
     }
 }
 
@@ -60,6 +59,6 @@ div.question p {
     div.wrapper > .low,
     div.wrapper > .top,
     div.wrapper > .admin {
-        line-height: 2em;
+        line-height: 1.5em;
     }
 }
