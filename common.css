@@ -52,7 +52,7 @@ div.question p {
 @media (min-width: 700px) {
     .wrapper {
         height: 80%; width: 600px;
-        margin: 10% auto; line-height: 2em;
+        margin: 5% auto; line-height: 2em;
     }
 }
 

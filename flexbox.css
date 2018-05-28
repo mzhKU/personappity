@@ -19,9 +19,6 @@ div.top:nth-of-type(2) {
     flex-grow: 2;
 }
 
-.top { align-self: flex-start; }
-.low { align-self: flex-end; }
-
 .question {
   height: 28%;
   width: 100%;
