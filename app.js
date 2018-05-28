@@ -12,12 +12,17 @@ app.controller("QuestionsController", function($scope) {
     *        have to be in agreement for the calculation to
     *        correctly work.                                     
     /* --------------------------------------------------------- */
-    var questions      = ["Question 1 text.", "Question 2 text.",
-                          "Question 3 text.", "Question 4 text.",
-                          "Question 5 text.", "Question 6 text."];
-    var questionsTypes = ["Drama-guy", "Initiative", "Spontaneous",
-                          "Drama-guy", "Initiative", "Spontaneous"];
-    var classes        = ["Initiative",  "Drama-guy", "Spontaneous"];
+    var question01 = "I'm rich, famous and powerful... (in my daydreams).";
+    var question02 = "I engage very fast into relations and show affection rapidly.";
+    var question03 = "I usually leave the big decisions to the important people in my life.";
+    var question04 = "I love home office.";
+    var question05 = "An interesting book or a video game is often better than a social event.";
+    var question06 = "I get involved fast at a new workplace.";
+    var questions      = [question01, question02, question03, question04,
+                          question05, question06]
+    var questionsTypes = ["Drama-Queen", "Initiative", "Narcisstic",
+                          "Drama-Queen", "Initiative", "Narcisstic"];
+    var classes        = ["Initiative",  "Drama-Queen", "Narcisstic"];
 
     // Initial values.
     var answers        = ["Maybe", "Maybe", "Maybe",
@@ -69,7 +74,6 @@ app.controller("QuestionsController", function($scope) {
     *  cue also when computed value is zero.                     */
     /* ----------------------------------------------------------*/
     function draw(values) {
-        console.log("draw");
         console.log(values);
 
         // Remove 'rect' from previous 'draw' call.
@@ -78,9 +82,10 @@ app.controller("QuestionsController", function($scope) {
         svg.selectAll("rect")
         .data(values).enter().append("rect")
         .attr("height", function(d, i) {return 10})
-        .attr("width", function(d, i) {return d*20+10})
+        .attr("width", function(d, i) {return d*25+10})
         .attr("x", function(d, i) {return 0})
-        .attr("y", function(d, i) {return (i*30)+5});
+        .attr("y", function(d, i) {return (i*25)+20})
+        .attr("fill", "#00A5FB");
     }
     /* ----------------------------------------------------------*/
 

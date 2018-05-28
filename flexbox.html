@@ -21,11 +21,11 @@
             <div class="top"      id="last" ng-click="step($event)">Last</div>
             <div class="top">     <span>Question {{ questionCounter }}</span></div>
             <div class="top"      id="next" ng-click="step($event)">Next</div>
+
             <div class="question">
                 <p ng-bind="question"></p>
                 <p>
-                    <span style="border: 1px solid grey">
-                        Current answer: 
+                    <span>Current answer: 
                         <span ng-bind="answer">{{ answer }}</span>
                     </span>
                 </p>

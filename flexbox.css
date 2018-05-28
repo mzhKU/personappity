@@ -20,12 +20,12 @@ div.top:nth-of-type(2) {
 }
 
 .question {
-  height: 28%;
+  height: 38%;
   width: 100%;
 }
 
 #resultsDraw {
-  height: 40%;
+  height: 30%;
 }
 
 #getResultsDiv {
